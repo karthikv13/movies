@@ -1,0 +1,21 @@
+<ul class="tags">
+	<li><a ng-click="update('action')">Action</a></li>
+	<li><a ng-click="update('adventure')">Adventure</a></li>
+	<li><a ng-click="update('biography')">Biography</a></li>
+	<li><a ng-click="update('comedy')">Comedy</a></li>
+	<li><a ng-click="update('drama')">Drama</a></li>
+	<li><a ng-click="update('horror')">Horror</a></li>
+</ul>
+	<input type="search" ng-model="search">
+	<button class="glyphicon glyphicon-search" type="button"></button>
+
+<div data-masonry-options={ itemSelector: "grid-item", columnWidth: 200 } class="grid js-masonry">
+  <div class="grid-item" ng-repeat="movie in movies | filter:search">
+	  <a ui-sref="movie({id:movie._id})">
+		  <figure>	
+		  	<img src="{{movie.image}}">
+		  	<figcaption>{{movie.name}}</figcaption>
+		  </figure>
+		</a>
+  </div>
+</div>

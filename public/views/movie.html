@@ -1,0 +1,13 @@
+<img src="{{movie.image}}"/>
+	<div class="imgDes">
+		<h3>{{movie.name}}</h3>
+		<p>{{movie.description}}</p>
+	</div>
+<div data-masonry-options={ itemSelector: "grid-item", columnWidth: 200 } class="grid js-masonry">
+  <div class="grid-item" ng-repeat="each in movie.cast">
+	  <figure>	
+	  	<img src="{{movie.cast.image}}"><br/>
+	  	<figcaption>{{movie.cast.name}}</figcaption>
+	  </figure>
+  </div>
+</div>

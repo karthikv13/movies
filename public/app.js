@@ -14,5 +14,11 @@ angular.module('movie',['ui.router','ngResource'])
 					templateUrl:'views/movie.html',
 					controller:'MovieCtrl'
 				})
-			
+			.state(
+				'newMovie',{
+					url: '/newMovie',
+					templateUrl:'views/newMovie.html',
+					controller:'NewMovieCtrl'
+				})
+
 	});
